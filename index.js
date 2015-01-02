@@ -39,9 +39,9 @@ module.exports = function (content) {
         } 
     }.bind(this);
 
-    opt.success = function (css) {
+    opt.success = function (stats) {
         markDependencies();
-        callback(null, css);
+        callback(null, stats.css);
     }.bind(this);
 
     opt.error = function (err) {
